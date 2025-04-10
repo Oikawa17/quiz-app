@@ -1,0 +1,67 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  background-image: url('C:\Users\kurts\quiz-app\public\bgquiz.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: #ffffff;
+}
+
+
+.container {
+  max-width: 600px;
+  margin: 50px auto;
+  padding: 20px;
+  border: 1px solid #ff0101;
+  border-radius: 5px;
+  background-image: url('C:\Users\kurts\quiz-app\public\plain-background.jpg'); /* Make sure image is in public folder */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  
+}
+
+h1 {
+  text-align: center;
+}
+
+.options {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+
+.option {
+  padding: 10px;
+  border: 1px solid #c2ffaf;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.option:hover {
+  background-color: #167533;
+}
+
+.result {
+  margin-top: 20px;
+  text-align: center;
+  font-weight: bold;
+}
+
+button {
+  padding: 10px 20px;
+  border: none;
+  background-color: #007bff;
+  color: rgb(211, 255, 154);
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
