@@ -3,13 +3,34 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-
-  background-image: url('C:\Users\kurts\quiz-app\public\bgquiz.jpg');
+  background-image: url('bgvid.mp4');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   color: #ffffff;
 }
+
+.app-wrapper {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+}
+
+.background-video {
+  position: absolute; /* or fixed */
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  transform: translate(-50%, -50%);
+  object-fit: cover;
+  z-index: -1;
+  filter: brightness(0.8);
+}
+
 
 
 .container {
@@ -18,15 +39,47 @@ body {
   padding: 20px;
   border: 1px solid #ff0101;
   border-radius: 5px;
-  background-image: url('C:\Users\kurts\quiz-app\public\plain-background.jpg'); /* Make sure image is in public folder */
+  background-image: url('C:\Users\kurts\quiz-app\public\plain-background.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  animation: fadeSlideIn 1s ease-out;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 0, 255, 0.1));
+  backdrop-filter: blur(20px);
+  border-radius: 50px;
+  padding: 2rem;
+  max-width: 600px;
+  margin: 0 auto;
+  margin-top: 60px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  color: white;
   
 }
 
+.option {
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  padding: 0.75rem;
+  margin: 0.5rem 0;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: background 0.7s ease, transform 0.5s;
+}
+
+.option:hover {
+  background: rgba(255, 255, 255, 0.1);
+  transform: scale(1.02);
+}
+
+.question {
+  font-size: 20px ;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+
 h1 {
   text-align: center;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: 50px ;
 }
 
 .options {
@@ -37,13 +90,15 @@ h1 {
 
 .option {
   padding: 10px;
-  border: 1px solid #c2ffaf;
+  border: 1px solid #c0afff;
   border-radius: 3px;
   cursor: pointer;
+  text-align: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif  ;
 }
 
 .option:hover {
-  background-color: #167533;
+  background-color: #00028f;
 }
 
 .result {
@@ -55,7 +110,7 @@ h1 {
 button {
   padding: 10px 20px;
   border: none;
-  background-color: #007bff;
+  background-color: #004c9c;
   color: rgb(211, 255, 154);
   border-radius: 3px;
   cursor: pointer;
@@ -63,5 +118,7 @@ button {
 
 button:hover {
   background-color: #0056b3;
+  background: rgba(255, 255, 255, 0.1);
+  transform: scale(1.02);
 }
 
